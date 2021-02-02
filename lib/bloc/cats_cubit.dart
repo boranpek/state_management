@@ -9,7 +9,6 @@ class CatsCubit extends Cubit<CatsState> {
   Future<void> getCats() async {
     try {
       emit(CatsLoading());
-      await Future.delayed(Duration(seconds: 2));
       final response = await _catsRepository.getCats();
       emit(CatsCompleted(response));
     } on NetworkError catch (e) {
