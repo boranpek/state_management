@@ -4,6 +4,7 @@ import 'package:state_management/catBloc/cats_cubit.dart';
 import 'package:state_management/catBloc/cats_repository.dart';
 import 'package:state_management/catBloc/cats_state.dart';
 import 'package:state_management/catMobx/cat_view.dart';
+import 'package:state_management/constants/navigation_constant.dart';
 
 class BlocCatsView extends StatefulWidget {
   @override
@@ -66,7 +67,7 @@ class _BlocCatsViewState extends State<BlocCatsView> {
           Text("This is Cubit"),
           TextButton(
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => CatView()));
+              Navigator.pushNamed(context, NavigationConstant.CAT_VIEW);
             },
             child: Text("Go to other screen"),
           ),

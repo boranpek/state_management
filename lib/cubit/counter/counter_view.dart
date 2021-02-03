@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:state_management/constants/navigation_constant.dart';
 import 'package:state_management/counter_mobx/counter_mobx_view.dart';
 import 'package:state_management/cubit/counter/cubit/counter_cubit.dart';
 
@@ -19,7 +20,7 @@ class CounterView extends StatelessWidget {
             Text("This is Cubit"),
             TextButton(
               onPressed: () {
-                Navigator.of(context).pushNamed('/cat');
+                Navigator.of(context).pushNamed(NavigationConstant.COUNTER_MOBX_VIEW);
               },
               child: Text("Go to other screen"),
             ),
