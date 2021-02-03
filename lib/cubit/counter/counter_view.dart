@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:state_management/counter_mobx/counter_mobx_view.dart';
 import 'package:state_management/cubit/counter/cubit/counter_cubit.dart';
 
 class CounterView extends StatelessWidget {
@@ -15,6 +16,13 @@ class CounterView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text("This is Cubit"),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/cat');
+              },
+              child: Text("Go to other screen"),
+            ),
             GestureDetector(
               onTap: () {
                 BlocProvider.of<CounterCubit>(context).decrement();

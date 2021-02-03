@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:state_management/catBloc/cats_cubit.dart';
 import 'package:state_management/catBloc/cats_repository.dart';
 import 'package:state_management/catBloc/cats_state.dart';
+import 'package:state_management/catMobx/cat_view.dart';
 
 class BlocCatsView extends StatefulWidget {
   @override
@@ -13,9 +14,11 @@ class _BlocCatsViewState extends State<BlocCatsView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BlocProvider(
-        create: (context) => CatsCubit(SampleCatsRepository()),
-        child: buildBlocConsumer(),
+      body: Center(
+        child: BlocProvider(
+          create: (context) => CatsCubit(SampleCatsRepository()),
+          child: buildBlocConsumer(),
+        ),
       ),
     );
   }
@@ -57,7 +60,18 @@ class _BlocCatsViewState extends State<BlocCatsView> {
 
   Center buildCenterText() {
     return Center(
-      child: Text("Hello"),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text("This is Cubit"),
+          TextButton(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => CatView()));
+            },
+            child: Text("Go to other screen"),
+          ),
+        ],
+      ),
     );
   }
 
@@ -71,7 +85,14 @@ class _BlocCatsViewState extends State<BlocCatsView> {
 
   Scaffold buildScaffoldError(CatsError error) {
     return Scaffold(
-      body: Text(error.message),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(error.message),
+          ],
+        ),
+      ),
     );
   }
 
