@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:state_management/catBloc/bloc_cats_view.dart';
-import 'package:state_management/catMobx/cat_view_model.dart';
 import 'package:state_management/constants/navigation_constant.dart';
-import 'package:state_management/counter_mobx/counter_mobx_view_model.dart';
+import 'package:state_management/mobx/catMobx/cat_view_model.dart';
+import 'package:state_management/mobx/counter_mobx/counter_mobx_view_model.dart';
 
 class CatView extends StatelessWidget {
   final _viewModel = CatViewModel();

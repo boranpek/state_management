@@ -2,7 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:mobx/mobx.dart';
 import 'package:http/http.dart' as http;
-import 'package:state_management/catMobx/cat.dart';
+import 'package:state_management/mobx/catMobx/cat.dart';
+
 part 'cat_view_model.g.dart';
 
 class CatViewModel = _CatViewModelBase with _$CatViewModel;

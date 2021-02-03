@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:state_management/catBloc/cats_repository.dart';
-import 'package:state_management/catBloc/cats_state.dart';
+import 'package:state_management/cubit/catBloc/cats_repository.dart';
+import 'package:state_management/cubit/catBloc/cats_state.dart';
 
 class CatsCubit extends Cubit<CatsState> {
   final CatsRepository _catsRepository;

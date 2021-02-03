@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:state_management/constants/navigation_constant.dart';
-import 'package:state_management/counter_mobx/counter_mobx_view_model.dart';
-import 'package:state_management/cubit/counter/counter_view.dart';
+import 'package:state_management/mobx/counter_mobx/counter_mobx_view_model.dart';
 
 class CounterMobxView extends StatelessWidget {
   final int a;

@@ -1,4 +1,4 @@
-#Wed Feb 03 17:37:03 EET 2021
+#Wed Feb 03 18:46:58 EET 2021
 base.0=/Users/boranpekel/Desktop/state_management/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

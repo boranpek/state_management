@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:state_management/catBloc/cats_cubit.dart';
-import 'package:state_management/catBloc/cats_state.dart';
+
 import 'package:state_management/constants/navigation_constant.dart';
+import 'package:state_management/cubit/catBloc/cats_cubit.dart';
+import 'package:state_management/cubit/catBloc/cats_state.dart';
 import 'package:state_management/cubit/counter/cubit/counter_cubit.dart';
 
 class BlocCatsView extends StatefulWidget {
@@ -30,6 +31,7 @@ class _BlocCatsViewState extends State<BlocCatsView> {
       },
       builder: (context, state) {
         if (state is CatsInitial) {
+          context.bloc<CounterCubit>().reset();
           return buildScaffoldInitial(context);
         } else if (state is CatsLoading) {
           return buildScaffoldLoading();
