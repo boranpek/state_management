@@ -11,7 +11,7 @@ abstract class _CatViewModelBase with Store {
   @observable
   List<Cat> catList = [];
 
-  final url = "https://hwasampleapi.firebaseio.com/http.json1";
+  final url = "https://hwasampleapi.firebaseio.com/http.json";
 
   @observable
   PageState pageState = PageState.NORMAL;

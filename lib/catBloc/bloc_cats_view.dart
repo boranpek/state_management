@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:state_management/catBloc/cats_cubit.dart';
-import 'package:state_management/catBloc/cats_repository.dart';
 import 'package:state_management/catBloc/cats_state.dart';
-import 'package:state_management/catMobx/cat_view.dart';
 import 'package:state_management/constants/navigation_constant.dart';
+import 'package:state_management/cubit/counter/cubit/counter_cubit.dart';
 
 class BlocCatsView extends StatefulWidget {
   @override
@@ -16,10 +15,7 @@ class _BlocCatsViewState extends State<BlocCatsView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: BlocProvider(
-          create: (context) => CatsCubit(SampleCatsRepository()),
-          child: buildBlocConsumer(),
-        ),
+        child: buildBlocConsumer(),
       ),
     );
   }
@@ -64,12 +60,16 @@ class _BlocCatsViewState extends State<BlocCatsView> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text("This is Cubit"),
-          TextButton(
-            onPressed: () {
-              Navigator.pushNamed(context, NavigationConstant.CAT_VIEW);
+          Text("This is CatCubit"),
+          BlocBuilder<CounterCubit, CounterState>(
+            builder: (context, state) {
+              return TextButton(
+                onPressed: () {
+                  context.bloc<CounterCubit>().increment();
+                },
+                child: Text(state.counter.toString()),
+              );
             },
-            child: Text("Go to other screen"),
           ),
         ],
       ),
