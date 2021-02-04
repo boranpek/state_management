@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:state_management/cubit/catBloc/cats_cubit.dart';
-import 'package:state_management/cubit/counter/cubit/counter_cubit.dart';
+import 'package:state_management/cubit/counter/counter_cubit.dart';
 import 'package:state_management/router/app_router.dart';
 import 'repository/cats_repository.dart';
 

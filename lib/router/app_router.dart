@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:state_management/constants/navigation_constant.dart';
-import 'package:state_management/cubit/catBloc/bloc_cats_view.dart';
-import 'package:state_management/cubit/counter/counter_view.dart';
+import 'package:state_management/screens/bloc_cats_view.dart';
+import 'package:state_management/screens/counter_view.dart';
 import 'package:state_management/mobx/catMobx/cat_view.dart';
 import 'package:state_management/mobx/counter_mobx/counter_mobx_view.dart';
 

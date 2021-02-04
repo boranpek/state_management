@@ -1,4 +1,4 @@
-import 'cat.dart';
+import '../../model/cat.dart';
 
 abstract class CatsState {
   const CatsState();
