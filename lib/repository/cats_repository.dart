@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:http/http.dart' as http;
 
-import 'cat.dart';
+import '../cubit/catBloc/cat.dart';
 
 abstract class CatsRepository {
   Future<List<Cat>> getCats();

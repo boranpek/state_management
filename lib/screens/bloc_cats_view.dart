@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'package:state_management/constants/navigation_constant.dart';
 import 'package:state_management/cubit/catBloc/cats_cubit.dart';
 import 'package:state_management/cubit/catBloc/cats_state.dart';
 import 'package:state_management/cubit/counter/cubit/counter_cubit.dart';
